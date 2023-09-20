@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:project1/signup.dart';
+
+import 'movie grid build.dart';
 
 class loginpage extends StatefulWidget {
   const loginpage({super.key});
@@ -57,21 +60,37 @@ class _loginpageState extends State<loginpage> {
                         ),
                       ),
                     ),
-                    Container(
-                      height: 40,
-                      child: Center(
-                          child: Text(
-                        "login",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 17),
-                      )),
-                      width: 180,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.indigo,
+                    InkWell(onTap: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MoviesPage()));
+                    },
+                      child: Container(
+                        height: 40,
+                        child: Center(
+                            child: Text(
+                          "login",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 17),
+                        )),
+                        width: 180,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Colors.indigo,
+                        ),
                       ),
                     ),
-                    Text("Dont have an account?"),
+                    Row(mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text("Dont have an account?"),
+                        InkWell(
+                            onTap: (){
+
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>signuppage()));
+
+                              },
+                            child: Text('Signup',style: TextStyle(fontWeight: FontWeight.bold),))
+                      ],
+                    ),
 
                   ],
                 )),

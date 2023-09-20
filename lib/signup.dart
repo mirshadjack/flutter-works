@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'login.dart';
+
 class signuppage extends StatefulWidget {
   const signuppage({super.key});
 
@@ -10,6 +12,8 @@ class signuppage extends StatefulWidget {
 class _signuppageState extends State<signuppage> {
   var namecontroler = TextEditingController();
   var passcontroler = TextEditingController();
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,7 +74,7 @@ class _signuppageState extends State<signuppage> {
                         borderRadius: BorderRadius.circular(40),
                         color: Colors.red),
                     child: Center(
-                      child: Text("sign Up",
+                      child: Text("Sign up",
                           style: TextStyle(
                             fontSize: 17,
                             fontWeight: FontWeight.bold,
@@ -82,8 +86,14 @@ class _signuppageState extends State<signuppage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text("already have an account?"),
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => loginpage()));
+                        },
+                      ),
                       Text(
-                        "Sign Up",
+                        "Sign up",
                         style: TextStyle(
                             fontSize: 17, fontWeight: FontWeight.bold),
                       )
