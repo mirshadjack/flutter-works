@@ -38,7 +38,7 @@ List<Map<String,dynamic>> grid=[
 
   {
     'image':NetworkImage(
-'https://akm-img-a-in.tosshub.com/indiatoday/images/story/202206/rajinikanth_jailer_0.jpg?VersionId=d3pW2SHxBXhvFrhTm7DpZJbfC0v1lpNA'),
+''),
     'title':'Jailer',
 
   }, {
@@ -47,4 +47,9 @@ List<Map<String,dynamic>> grid=[
     'title':'Jailer',
 
   },
+  {
+    'image':NetworkImage(
+        'https://akm-img-a-in.tosshub.com/indiatoday/images/story/202206/rajinikanth_jailer_0.jpg?VersionId=d3pW2SHxBXhvFrhTm7DpZJbfC0v1lpNA'),
+    'title':'Jailer',
+  }
 ];
